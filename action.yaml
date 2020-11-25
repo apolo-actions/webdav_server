@@ -8,7 +8,7 @@ inputs:
     descr: |
       Reference to the target volume to serve.
   http_auth:
-    default: False
+    default: "False"
     descr: |
       Whether to enable Neu.ro platform-based authentication or not.
       If disabled (by default) - your WebDAV will not be protected by Neu.ro SSO.
