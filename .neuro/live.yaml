@@ -9,6 +9,6 @@ volumes:
 
 jobs:
   webdav_server:
-    action: gh:neuro-actions/web_dav_server@master
+    action: gh:neuro-actions/webdav_server@master
     args:
       volume_remote: $[[ volumes.project.remote ]]
