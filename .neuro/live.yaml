@@ -1,0 +1,14 @@
+kind: live
+title: Test
+
+volumes:
+  project:
+    remote: "storage:webdav-test"
+    mount: /project
+    local: .
+
+jobs:
+  webdav_server:
+    action: gh:neuro-actions/web_dav_server@master
+    args:
+      volume_remote: $[[ volumes.project.remote ]]
