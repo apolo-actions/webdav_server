@@ -3,7 +3,7 @@ title: Test
 
 volumes:
   project:
-    remote: "storage:webdav-test"
+    remote: "storage:webdav-demo"
     mount: /project
     local: .
 
