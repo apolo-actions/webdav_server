@@ -11,4 +11,4 @@ jobs:
   webdav_server:
     action: gh:neuro-actions/webdav_server@master
     args:
-      volume_remote: $[[ volumes.project.remote ]]
+      volume_remote: ${{ volumes.project.remote }}
