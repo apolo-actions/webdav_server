@@ -23,7 +23,7 @@ inputs:
     descr: |
       Extra parameters for `rclone serve webdav` command invocation.
 
-web_dav:
+job:
   image: rclone/rclone:1.53.2
   name: $[[ flow.title ]]-webdav
   http_port: $[[ inputs.port ]]
