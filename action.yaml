@@ -23,6 +23,10 @@ inputs:
     descr: |
       The name of WebDAV server.
       Use it to generate a predictable job hostname.
+  preset:
+    default: cpu-small
+    descr: |
+      The amount of resources to use, while running the server.
   extra_params:
     default: ""
     descr: |
@@ -31,6 +35,7 @@ inputs:
 job:
   image: rclone/rclone:1.53.2
   name: ${{ inputs.job_name }}
+  preset: ${{ inputs.preset }}
   http_port: ${{ inputs.port }}
   http_auth: ${{ inputs.http_auth }}
   detach: True
