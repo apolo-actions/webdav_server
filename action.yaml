@@ -23,6 +23,10 @@ inputs:
     descr: |
       The name of WebDAV server.
       Use it to generate a predictable job hostname.
+  job_lifespan:
+    default: "1d"
+    descr: |
+      The amount of time to run WebDAV server job container.
   preset:
     default: cpu-small
     descr: |
@@ -36,6 +40,7 @@ job:
   image: rclone/rclone:1.53.2
   name: ${{ inputs.job_name }}
   preset: ${{ inputs.preset }}
+  life_span: ${{ inputs.job_lifespan }}
   http_port: ${{ inputs.port }}
   http_auth: ${{ inputs.http_auth }}
   detach: True
