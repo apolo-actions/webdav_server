@@ -11,7 +11,7 @@ inputs:
     default: ""
     descr: |
       Whether to enable Neu.ro platform-based authentication or not.
-      If disabled (by default) - your WebDAV will not be protected by Neu.ro SSO.
+      If disabled (set to "" by default) - your WebDAV will not be protected by Neu.ro SSO.
       It has no impact on `rclone serve webdav` parameters though.
   port:
     default: "8080"
