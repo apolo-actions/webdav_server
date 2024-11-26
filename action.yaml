@@ -1,7 +1,7 @@
 kind: live
-name: Neu.ro WebDAV server
-author: Neu.ro MLOps team (Yevhenii Semendiak)
-descr: Serve your Neu.ro volume with rclone WebDAV server
+name: WebDAV server
+author: MLOps team
+descr: Serve your Apolo volume with rclone WebDAV server
 
 inputs:
   volume_remote:
@@ -10,8 +10,8 @@ inputs:
   http_auth:
     default: ""
     descr: |
-      Whether to enable Neu.ro platform-based authentication or not.
-      If disabled (set to "" by default) - your WebDAV will not be protected by Neu.ro SSO.
+      Whether to enable Apolo platform-based authentication or not.
+      If disabled (set to "" by default) - your WebDAV will not be protected by Apolo SSO.
       It has no impact on `rclone serve webdav` parameters though.
   port:
     default: "8080"

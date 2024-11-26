@@ -1,6 +1,6 @@
-# Run your WebDAV server using neuro-flow within Neu.ro platform
+# Run your WebDAV server using apolo-flow within Apolo platform
 
-With this action, you can serve your data in the Neu.ro cluster (storage folder, disk, etc.) using [rclone's WebDAV server](https://rclone.org/webdav/).
+With this action, you can serve your data in the Apolo cluster (storage folder, disk, etc.) using [rclone's WebDAV server](https://rclone.org/webdav/).
 
 The only required parameter is the reference to the target remote volume.
 
@@ -9,7 +9,7 @@ The only required parameter is the reference to the target remote volume.
 ```
 jobs:
   webdav_server:
-    action: gh:neuro-actions/webdav_server@master
+    action: gh:apolo-actions/webdav_server@master
     args:
       volume_remote: ${{ volumes.project.remote }}
 ```
@@ -29,8 +29,8 @@ args:
 
 ### `http_auth`
 
-Whether to enable Neu.ro platform-based authentication or not.
-If this argument is disabled (set to `""` by default), your WebDAV will not be protected by the Neu.ro SSO (single sign-on authentication).
+Whether to enable Apolo platform-based authentication or not.
+If this argument is disabled (set to `""` by default), your WebDAV will not be protected by the Apolo SSO (single sign-on authentication).
 It has no impact on the `rclone serve webdav` parameters.
 
 ### Example
@@ -78,7 +78,7 @@ args:
 ### `preset`
 
 The resource preset to use when running this job. `"cpu-small"` by default. 
-You can view the list of available presets by running `neuro config show`.
+You can view the list of available presets by running `apolo config show`.
 
 ### Example
 
